@@ -43,3 +43,22 @@ class MeraList:
             result = result + str(self.A[i]) + ','
         #Remove last comma
         return '[' + result[:-1] + ']'
+    
+    def __getitem__(self,index):
+        if 0 <= index < self.n:
+            return self.A[index]
+        else:
+            return 'IndexError - Index out of range'
+        
+L=MeraList()
+L.append("Hi")
+L.append(50)
+L.append(3.5)
+L.append("Krishna")
+print(L)
+print(L[0])
+print(L[1])
+print(L[2])
+print(L[3])
+print(L[4])
+
