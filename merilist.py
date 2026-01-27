@@ -50,15 +50,25 @@ class MeraList:
         else:
             return 'IndexError - Index out of range'
         
+    def pop(self):
+        if self.n==0:
+            return print('Empty List')
+        
+        print(self.A[self.n-1])
+        self.n = self.n - 1 #shortcut
+        
 L=MeraList()
 L.append("Hi")
 L.append(50)
 L.append(3.5)
 L.append("Krishna")
 print(L)
-print(L[0])
-print(L[1])
-print(L[2])
-print(L[3])
-print(L[4])
+L.pop()
+L.pop()
+L.pop()
+L.pop()
+L.pop()
+
+
+
 
