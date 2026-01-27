@@ -61,6 +61,11 @@ class MeraList:
         self.n = 0
         self.size = 1
 
-
-
-
+    def find(self,item):
+        for i in range(self.n):
+            if self.A[i]==item:
+                return i
+            
+        return "ValueError - not in list"
+    
+    
