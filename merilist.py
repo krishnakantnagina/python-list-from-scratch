@@ -56,18 +56,10 @@ class MeraList:
         
         print(self.A[self.n-1])
         self.n = self.n - 1 #shortcut
-        
-L=MeraList()
-L.append("Hi")
-L.append(50)
-L.append(3.5)
-L.append("Krishna")
-print(L)
-L.pop()
-L.pop()
-L.pop()
-L.pop()
-L.pop()
+
+    def clear(self):
+        self.n = 0
+        self.size = 1
 
 
 
