@@ -41,5 +41,5 @@ class MeraList:
         result =''
         for i in range(self.n):
             result = result + str(self.A[i]) + ','
-
-        return '[' + result + ']'
+        #Remove last comma
+        return '[' + result[:-1] + ']'
