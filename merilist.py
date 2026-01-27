@@ -11,3 +11,7 @@ class MeraList:
     def __make_array(self,capacity):
         #create a Ctype array(static, referential) with size capacity
         return (capacity*ctypes.py_object)()
+    
+    #use magic method for create length check method
+    def __len__(self):
+        return self.n
