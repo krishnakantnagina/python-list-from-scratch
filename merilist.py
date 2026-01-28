@@ -77,3 +77,22 @@ class MeraList:
 
         self.A[pos]=value
         self.n = self.n + 1
+
+    def __delitem__(self,pos):
+        #delete
+            
+
+        if 0 <= pos < self.n-1:
+            for i in range(pos, self.n-1):
+                print(self.A[i])
+                self.A[i] = self.A[i+1]
+
+                self.n = self.n-1
+                
+        elif pos == self.n-1:
+            print(self.A[pos])
+            self.n = self.n-1
+
+        else:
+            print('index is out of range')
+
