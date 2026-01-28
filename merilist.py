@@ -68,4 +68,12 @@ class MeraList:
             
         return "ValueError - not in list"
     
-    
+    def insert(self,pos,value):
+        if self.n == self.size:
+            self.__resize(self.size*2)
+
+        for i in range(self.n, pos, -1):
+            self.A[i] = self.A[i-1]
+
+        self.A[pos]=value
+        self.n = self.n + 1
