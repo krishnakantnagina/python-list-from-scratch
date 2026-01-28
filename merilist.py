@@ -66,7 +66,7 @@ class MeraList:
             if self.A[i]==item:
                 return i
             
-        return "ValueError - not in list"
+        return 'ValueError - not in list'
     
     def insert(self,pos,value):
         if self.n == self.size:
@@ -77,3 +77,31 @@ class MeraList:
 
         self.A[pos]=value
         self.n = self.n + 1
+
+    def __delitem__(self,pos):
+        #delete
+            
+
+        if 0 <= pos < self.n-1:
+            print(self.A[pos])
+            for i in range(pos, self.n-1):
+                self.A[i] = self.A[i+1]
+
+            self.n = self.n-1
+                
+        elif pos == self.n-1:
+            print(self.A[pos])
+            self.n = self.n-1
+
+        else:
+            print('index is out of range')
+
+    def remove(self, value):
+
+        pos = self.find(value)
+
+        if type(pos)== int:
+            self.__delitem__(pos)
+        else:
+            return print(pos)
+
