@@ -104,4 +104,13 @@ class MeraList:
             self.__delitem__(pos)
         else:
             return print(pos)
-
+        
+    def min(self):
+        if self.n == 0:
+            return "list is empty"
+    
+        min = self.A[0]
+        for i in range(self.n):
+            if min > self.A[i]:
+                min = self.A[i]
+        return min
