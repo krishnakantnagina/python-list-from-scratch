@@ -114,3 +114,13 @@ class MeraList:
             if min > self.A[i]:
                 min = self.A[i]
         return min
+    
+    def max(self):
+        if self.n == 0:
+            return "list is empty"
+    
+        max = self.A[0]
+        for i in range(self.n):
+            if max < self.A[i]:
+                max = self.A[i]
+        return max
