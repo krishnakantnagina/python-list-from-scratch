@@ -124,3 +124,18 @@ class MeraList:
             if max < self.A[i]:
                 max = self.A[i]
         return max
+    
+    def sort(self):
+        if self.n <= 1:
+            return 
+    
+        no = self.n
+
+        original_n = self.n
+        B = self.__make_array(self.size)
+        for i in range(no):
+            a = self.min()
+            B[i] = a
+            self.remove(a)
+        self.A = B
+        self.n = original_n
